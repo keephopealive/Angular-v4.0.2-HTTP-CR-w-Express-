@@ -1,0 +1,4 @@
+<h3>List Widget</h3>
+<div *ngFor="let widget of this._widgetService.widgets">
+  <app-widget-details [widget]="widget"></app-widget-details>
+</div>

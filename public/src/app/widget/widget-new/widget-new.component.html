@@ -1,0 +1,16 @@
+<h3>New Widget</h3>
+<form (submit)="onSubmit()" #formData="ngForm">
+
+  <input type="text" name="name"
+    [(ngModel)]="newWidget.name"
+    #name="ngModel"/>
+
+  <input type="text" name="description" 
+    #description="ngModel"
+    [(ngModel)]="newWidget.description"/>
+
+  <input type="submit"
+    [disabled]="!formData.form.valid"
+  />
+
+</form>

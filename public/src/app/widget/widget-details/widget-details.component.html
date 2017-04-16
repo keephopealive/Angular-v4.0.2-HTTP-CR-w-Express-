@@ -1,0 +1,6 @@
+<div>
+  <span>{{ widget.name }} - {{ widget.description }}</span>
+  <button (click)="destroy(widget)">Delete</button>
+  <button (click)="widget.editable = !widget.editable">Edit</button>
+  <app-widget-edit *ngIf="widget.editable" [widget]="widget"></app-widget-edit>
+</div>
